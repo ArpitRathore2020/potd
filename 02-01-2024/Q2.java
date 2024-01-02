@@ -6,6 +6,9 @@ Question:
     Union of the two arrays can be defined as the set containing distinct elements from both the arrays. If there are repetitions, then only one occurrence of element should be printed in the union.
     Note : Elements are not necessarily distinct.
 
+Link: 
+    https://www.geeksforgeeks.org/problems/union-of-two-arrays3538/1
+
 Example 1:
     Input:
         5 3
