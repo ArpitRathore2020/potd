@@ -28,7 +28,8 @@ Constraints:
     s and goal consist of lowercase English letters.
 
 Complexities:
-    < Not 100% sure. UPDATE later > 
+    Time: O(n)
+    Space: O(n)
 */
 class Solution {
     public boolean rotateString(String s, String goal) {
