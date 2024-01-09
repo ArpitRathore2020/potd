@@ -43,24 +43,27 @@ Complexities:
     Space: O(1) 
 */
 
-class Solution {
-    public int minCost(String colors, int[] neededTime) {
-        int n = colors.length();
-        int time = 0;
-        int i = 0;
-        while (i < n) {
-            int sum = 0;
-            int max = neededTime[i];
-            int j = i;
-            while (j < n && colors.charAt(i) == colors.charAt(j)) {
-                sum += neededTime[j];
-                if (max < neededTime[j])
-                    max = neededTime[j];
-                ++j;
+import java.util.*;
+import java.math.BigInteger; // gcd
+
+public class Q1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int tt = sc.nextInt();
+        while (tt-- != 0) {
+            String s = sc.next();
+            int arr[] = new int[s.length()];
+            int min = Integer.MAX_VALUE;
+            for (int i = 0; i < s.length(); i++) {
+                arr[i] = Integer.parseInt(String.valueOf(s.charAt(i)));
+                min = Math.min(min, arr[i]);
             }
-            time += (sum - max);
-            i = j;
+            if (s.length() == 2) {
+                System.out.println(arr[1]);
+            } else {
+                System.out.println(min);
+            }
+
         }
-        return time;
     }
 }
